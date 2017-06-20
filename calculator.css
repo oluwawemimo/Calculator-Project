@@ -1,0 +1,73 @@
+/*	Calculator.css
+	CSS external file for Calculator.html
+*/
+
+body {
+	background-color: #3EEEE3;
+}
+
+#main {
+	width: 300px;
+    height: 400px;
+    background: #CCCCCC;
+    margin: 50px auto;
+}
+
+textarea {
+	width: 90%;
+	
+	border: 0;
+	margin-left: 15px;
+	padding-top: 20px;
+	overflow: hidden;
+	
+}
+
+/*
+#display {
+	display: block;
+    font-family: Serif;
+    width: 230px;
+    height: 40px;
+    margin: 10px auto;
+    text-align: right;
+    border: 0;
+    background: #3b3535;
+    color: #fff;
+    padding-top: 20px;
+    font-size: 20px;
+    margin-left: 25px;
+    outline: none;
+    overflow: hidden;
+    letter-spacing: 4px;
+    position: relative;
+    top:10px;
+}*/
+
+#row-one {
+	margin-bottom: 20px;
+    position: relative;
+    top:10px;
+}
+
+.row {
+	width:300px;
+    margin-top:10px;
+}
+
+#del {
+	width: 50px;
+    height: 20px;
+    margin-left: 15px;
+    border-radius: 4px;
+}
+
+button {
+	border: 0;
+	margin-left: 15px;
+	color: #000000;
+	width: 50px;
+    height: 20px;
+	width: 50px;
+    height: 20px;
+}
