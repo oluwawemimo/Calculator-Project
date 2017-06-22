@@ -2,10 +2,12 @@
 	CSS external file for Calculator.html
 */
 
+/* adds background-color to the entire HTML document */
 body {
-	background-color: #3EEEE3;
+	background-color: #3E88E3;
 }
 
+/* styles the div containing all*/
 #main {
 	width: 300px;
     height: 400px;
@@ -13,36 +15,21 @@ body {
     margin: 50px auto;
 }
 
+/* CSS for the screen of the calculator*/
 textarea {
 	width: 90%;
-	
+	margin-top: 15px;
 	border: 0;
 	margin-left: 15px;
 	padding-top: 20px;
 	overflow: hidden;
-	
+	resize: none;
+	text-align: right;
+	font-size: 20px;
+	letter-spacing: 2px;
+	color: #DD0000;
+	border-radius: 5px;
 }
-
-/*
-#display {
-	display: block;
-    font-family: Serif;
-    width: 230px;
-    height: 40px;
-    margin: 10px auto;
-    text-align: right;
-    border: 0;
-    background: #3b3535;
-    color: #fff;
-    padding-top: 20px;
-    font-size: 20px;
-    margin-left: 25px;
-    outline: none;
-    overflow: hidden;
-    letter-spacing: 4px;
-    position: relative;
-    top:10px;
-}*/
 
 #row-one {
 	margin-bottom: 20px;
@@ -59,15 +46,34 @@ textarea {
 	width: 50px;
     height: 20px;
     margin-left: 15px;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
-button {
-	border: 0;
-	margin-left: 15px;
-	color: #000000;
+/* styling for the buttons of the calculator */
+.btn-style {
 	width: 50px;
-    height: 20px;
+    height: 50px;
+	margin-left: 18px; 
+    border-radius: 4px;
+	background: #050505;
+    color: #FFFFFF;
+    font-size: 20px;
+	border: 1px solid #CCCCCC;
+}
+
+/* addition styling for delete,equal to and addition buttons */
+.spec {
 	width: 50px;
-    height: 20px;
+    height: 50px;
+	margin-left: 18px; 
+    border-radius: 4px;
+	background: #FF0000;
+    color: #000000;
+    font-size: 20px;
+	border: 1px solid #CCCCCC;
+}
+
+/* mouse hover style for the buttons*/
+.btn-style:hover {
+	background-color: #DDEE78;
 }
