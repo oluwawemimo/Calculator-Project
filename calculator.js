@@ -39,7 +39,7 @@ app.controller("calControls", function($scope) {
 	}
 	
 	$scope.equalTo = function() {
-		$scope.display = eval($scope.display); 		//function for = button
+		$scope.display = eval($scope.display); 		//function for equal(=) button
 	}
 });
 
