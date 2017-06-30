@@ -3,14 +3,16 @@
 	<head>
 		<meta charset= "UTF-8">
 		<title> Simple Calculator </title>
-		<link rel="stylesheet" href="style/calculator.css"/>
+		<link rel="stylesheet" href="calculator.css"/>
+		
 	</head>
-	<body>
-	
+	<body ng-app="myCalculator" ng-controller="calControls">
+		<h1> {{ title }} </h1> 
+		
 		<div id = "main">
 			<!-- The calculator screen is a textarea -->
 			
-			<textarea rows = "2" cols = "20" id="display" readonly placeholder="Simple Calculator"></textarea>
+			<textarea rows = "2" " cols = "20" id="display" readonly> {{ display }} </textarea>
 			
 			<!-- The number and operation keys of the calculator is a button.
 				each row of the Calculator button is embedded in a div.
@@ -18,39 +20,44 @@
 			-->
 			
 				<div id="row-one">
-					<button value="√" class="btn-style" onclick="display.value = Math.sqrt(display.value)">√</button>
-					<button value="X2" class="btn-style" onclick="display.value = Math.pow(display.value,2)">x<sup>2</sup></button>
-					<button value="1/x" class="btn-style" onclick="display.value = 1/display.value">1/x</button>
-					<button value="±" class="btn-style" onclick="display.value=(display.value==Math.abs(display.value)?-(display.value):Math.abs(display.value))">±</button>
+					<button value="√" class="btn-style" ng-click="sqroot()">√</button>
+					<button value="X2" class="btn-style" ng-click="squared()">x<sup>2</sup></button>
+					<button value="1/x" class="btn-style" ng-click="oneOverVal()">1/x</button>
+					<button value="&PlusMinus;" class="btn-style" ng-click="absoluteVal()">&PlusMinus;</button>
 				</div>
 				
 				<div>
-					<button value="Del" class="spec" onclick="display.value = ''">Del</button>
-					<button value="%" class="btn-style" onclick="display.value += '%'">%</button>
-					<button value="9" class="btn-style" onclick="display.value += '9'">9</button>
-					<button value="/" class="btn-style" onclick="display.value += '/'">/</button> 
+					<button value="Del" class="spec" ng-click="del()">Del</button>
+					<button value="&percnt;" class="btn-style" ng-click="compute('&percnt;')">%</button>
+					<button value="9" class="btn-style" ng-click="compute('9')">9</button>
+					<button value="/" class="btn-style" ng-click="compute('/')">&divide;</button> 
 				</div>
 				
 				<div class="row">
-					<button value="4" class="btn-style" onclick="display.value += '4'">4</button>
-					<button value="5" class="btn-style" onclick="display.value += '5'">5</button>
-					<button value="6" class="btn-style" onclick="display.value += '6'">6</button>
-					<button value="*" class="btn-style" onclick="display.value += '*'">x</button> 
+					<button value="4" class="btn-style" ng-click="compute('4')">4</button>
+					<button value="5" class="btn-style" ng-click="compute('5')">5</button>
+					<button value="6" class="btn-style" ng-click="compute('6')">6</button>
+					<button value="*" class="btn-style" ng-click="compute('*')">&times;</button> 
 				</div>
 				
 				<div class="row">
-					<button value="1" class="btn-style" onclick="display.value += '1'">1</button>
-					<button value="2" class="btn-style" onclick="display.value += '2'">2</button>
-					<button value="3" class="btn-style" onclick="display.value += '3'">3</button>
-					<button value="-" class="btn-style" onclick="display.value += '-'">-</button> 
+					<button value="1" class="btn-style" ng-click="compute('1')">1</button>
+					<button value="2" class="btn-style" ng-click="compute('2')">2</button>
+					<button value="3" class="btn-style" ng-click="compute('3')">3</button>
+					<button value="-" class="btn-style" ng-click="compute('-')">-</button> 
 				</div>
 				
 				<div class="row">
-					<button value="." class="btn-style" onclick="display.value += '.'">.</button>
-					<button value="0" class="btn-style" onclick="display.value += '0'">0</button>
-					<button value="=" class="spec" onclick="display.value = eval(display.value)">=</button>
-					<button value="+" class="spec" onclick="display.value += '+'">+</button> 
+					<button value="." class="btn-style" ng-click="compute('.')">.</button>
+					<button value="0" class="btn-style" ng-click="compute('0')">0</button>
+					<button class="spec" ng-click="equalTo()">=</button>
+					<button value="&plus;" class="spec" ng-click="compute('&plus;')">&plus;</button> 
 				</div>			
 		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<!-- Modules -->
+		<script src="calculator.js"></script>
+		
 	</body>
 </html>
