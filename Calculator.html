@@ -1,23 +1,24 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="myCalculator">
 	<head>
 		<meta charset= "UTF-8">
 		<title> Simple Calculator </title>
-		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script> 
 		<link rel="stylesheet" href="calculator.css"/>
 		<script src="calculator.js"></script>
 	</head>
-	<body ng-app="myCalculator" ng-controller="calControls">
-		<h1> {{ title }} </h1> 
-		
-		<div id = "main">
+	<body>
+	
+		<div id = "main" ng-controller="calControls">
+			
+			
 			<!-- The calculator screen is a textarea -->
 			
 			<textarea rows = "2" " cols = "20" id="display" readonly> {{ display }} </textarea>
 			
 			<!-- The number and operation keys of the calculator is a button.
 				each row of the Calculator button is embedded in a div.
-				HTML onclick attribute is used to execute Javascript when a button is clicked
+				HTML ng-click attribute is used to execute AngularJS when a button is clicked
 			-->
 			
 				<div id="row-one">
@@ -55,10 +56,6 @@
 					<button value="&plus;" class="spec" ng-click="compute('&plus;')">&plus;</button> 
 				</div>			
 		</div>
-		
-		<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
-		<!-- Modules -->
-		
 		
 	</body>
 </html>

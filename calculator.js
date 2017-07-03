@@ -9,7 +9,6 @@ var app = angular.module("myCalculator", []);
 // <!-- Controllers -->
 
 app.controller("calControls", function($scope) {
-	$scope.title = "Simple Calculator"; // This displays header1 
 	$scope.display = "";				// This sets the value on the screen of calculator to null
 	
 	$scope.compute = function(val) {	// This function works for numbers and basic operation keys (+,-,/,*)
