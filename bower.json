@@ -1,0 +1,18 @@
+{
+  "name": "Calculator-Project",
+  "homepage": "https://github.com/oluwawemimo/Calculator-Project",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.5"
+  }
+}
